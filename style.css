@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 0rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(14, 41, 252),#fbe4e4);
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.section-part{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+    position: relative;
+}
+.left-section{
+    background: rgba(76, 222, 255, 0.655);
+    padding: 1rem 2rem ;
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+} 
+.container .left-section legend{
+    color: black;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    font-size: 20px;
+}
+.container .left-section fieldset{
+    border: none;
+    border-top: 1px dashed #000;
+}
+.container .left-section .form_rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem 0;
+}
+.container .left-section input,textarea{
+    padding: 0.5rem;
+    outline: none;
+    border-radius: .5rem;
+    border: none;
+    width:15rem;
+    resize: none;
+    background-color: whitesmoke;
+}
+.btn{
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background: blue;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;    
+}
+.right-section{
+    background:whitesmoke;
+    overflow-y: auto;
+    padding: 1rem;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+} 
+.container .right-section .part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.container .right-section .part1 .resume_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-top: 5px;
+}
+.container .right-section h3{
+    border-bottom: 1px solid #000;
+}
+.container .right-section .part2, .part3, .part4, .part5{
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 10px;
+    margin-bottom: 10px;   
+}
+.education_part, .experience_part{
+    padding: 5px 20px;
+}
+.education_part p{
+    padding: 4px 0px;
+}
+.skills_part p{
+    padding: 5px 20px;
+}
+.project_part p{
+    padding: 5px 20px;
+}
+.experience_part{
+    padding: 5px 20px;
+}
+
+.skills_part1, .project_part1{
+    display: flex;
+}
+.experience_part1{
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.experience_part1_company{
+    gap: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+}
+.experience_part1_duration{
+    gap: 5px;
+    display: flex;
+    justify-content: start;
+}
+#project_resume{
+    font-weight: bold;
+}
+#language_resume{
+    margin-left: 100px;
+}
+#framework_resume{
+    margin-left: 120px;
+}
+#tools_resume{
+    margin-left: 160px;
+}
+#database_resume{
+    margin-left: 205px;
+}
+#college_resume{
+    font-weight: bold;
+     font-size: 17px;
+}
+.part2_section1, .part2_section3, .part2_section2{
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    font-size: 16px;
+}
+.part2_section2_years{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.print{
+    display: none;
+}

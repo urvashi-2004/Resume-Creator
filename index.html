@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+  <div class="section-part">
+  <div class="left-section">
+    <form>
+      <fieldset>
+        <legend>Personal Details</legend>
+      <div class="form_rows">
+        <label for="name">Name : </label>
+        <input type="text" id="name" placeholder="Full Name" />
+      </div>
+      <div class="form_rows">
+        <label for="role">Role : </label>
+        <input type="text" id="role" placeholder="Role" />
+      </div>
+      <div class="form_rows">
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="Email" />
+      </div>
+      <div class="form_rows">
+        <label for="phone">Phone : </label>
+        <input type="text" id="phone" placeholder="Phone Number" />
+      </div>
+      </fieldset><br>
+      
+      <fieldset>
+        <legend>Education</legend>
+        <div class="form_rows">
+          <label for="college">College : </label>
+          <input type="text" id="college" placeholder="College Name" />
+        </div>
+        <div class="form_rows">
+          <label for="address">Address : </label>
+          <input type="text" id="address" placeholder="Address" />
+        </div>
+        <div class="form_rows">
+          <label for="degree">Degree : </label>
+          <input type="text" id="degree" placeholder="Degree" />
+        </div>
+        <div class="form_rows">
+          <label for="branch">Branch : </label>
+          <input type="text" id="branch" placeholder="Branch" />
+        </div>
+        <div class="form_rows">
+          <label for="Syear">Starting Year : </label>
+          <input type="text" id="Syear" placeholder="Starting Year" />
+        </div>
+       
+        <div class="form_rows">
+          <label for="Pyear">Passing Year : </label>
+          <input type="text" id="Pyear" placeholder="Passing Year" />
+        </div>
+        <div class="form_rows">
+          <label for="cgpa">CGPA : </label>
+          <input type="text" id="cgpa" placeholder="CGPA" />
+        </div>
+      </fieldset><br>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <div class="form_rows">
+          <label for="language">Languages : </label>
+          <input type="text" id="language" placeholder="Eg. C, C++ etc." />
+        </div>
+        <div class="form_rows">
+          <label for="framework">Frameworks : </label>
+          <input type="text" id="framework" placeholder="React etc." />
+        </div>
+        <div class="form_rows">
+          <label for="database">Databases : </label>
+          <input type="text" id="database" placeholder="Mysql etc." />
+        </div>
+        <div class="form_rows">
+          <label for="tools">Tools : </label>
+          <input type="text" id="tools" placeholder="Vscode etc." />
+        </div>
+      </fieldset><br>
+
+
+      <fieldset>
+        <legend>Projects</legend>
+        <div class="form_rows">
+          <label for="project">Project : </label>
+          <input type="text" id="project" placeholder="Project Name" />
+        </div>
+        <div class="form_rows">
+          <label for="technology">Technology : </label>
+          <input type="text" id="technology" placeholder="Technology used" />
+        </div>
+        <div class="form_rows">
+          <label for="description">Description : </label>
+          <textarea
+            name="description"
+            id="project_description"
+            rows="4"
+            cols="20"
+            placeholder="Description about your project"
+          ></textarea>
+        </div>
+        <div class="form_rows">
+          <label for="link">Link : </label>
+          <input type="url" id="plink" placeholder="Deployment Link" />
+        </div>
+      </fieldset><br>
+
+
+      <fieldset>
+        <legend>Experience</legend>
+        <div class="form_rows">
+          <label for="company">Company : </label>
+          <input type="text" id="company" placeholder="Company Name" />
+        </div>
+        <div class="form_rows">
+          <label for="designation">Designation : </label>
+          <input type="text" id="designation" placeholder="Designation" />
+        </div>
+        <div class="form_rows">
+          <label for="clocation">Location : </label>
+          <input type="text" id="clocation" placeholder="Location" />
+        </div>
+        <div class="form_rows">
+          <label for="duration">Duration : </label>
+          <input type="text" id="duration" placeholder="Duration" />
+        </div>
+        <div class="form_rows">
+          <label for="description">Description : </label>
+          <textarea
+            name="description"
+            id="company_description"
+            rows="4"
+            cols="20"
+            placeholder="Description about your role"
+          ></textarea>
+        </div>
+      </fieldset><br>
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="reset" class="btn" onclick="clearResume()">Reset</button>
+      <button class="btn" onclick="handleLeft()">View & Print</button>
+    
+    </form>
+  </div>
+
+
+  <div class="right-section">
+    <div class="part1">
+      <h1 id="name_resume"></h1>
+      <div class="resume_header">
+        <p id="role_resume"></p> |
+        <p id="email_resume"></p> |
+        <p id="phone_resume"></p> 
+      </div>
+    </div>
+
+    <div class="part2">
+      <h3>Education</h3>
+      <div class="education_part">
+      <div class="part2_section1">
+        <p id="college_resume"></p>
+          <p id="address_resume"></p>
+      </div>
+
+      <div class="part2_section2">
+        <div class="part2_section2_years">
+          <p id="degree_resume"></p> -  <p id="branch_resume"></p>
+      </div>
+      <div class="part2_section2_years">
+          <p id="Syear_resume"></p> -  <p id="Pyear_resume"></p>
+      </div>
+      </div>
+
+
+      <div class="part2_section3">
+        <p id="cgpa_resume"></p>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div class="part3">
+      <h3>Skills</h3>
+      <div class="skills_part">
+        <div class="skills_part1">
+          <p>Programming / Languages : </p>
+          <p id="language_resume"></p>
+          </div>
+          <div class="skills_part1">
+            <p>Libraries / Frameworks : </p>
+            <p id="framework_resume"></p>
+            </div>
+            <div class="skills_part1">
+              <p>Tools / Platforms : </p>
+              <p id="tools_resume"></p>
+              </div>
+            <div class="skills_part1">
+              <p>Databases : </p>
+              <p id="database_resume"></p>
+              </div>
+             
+
+      </div>
+    </div>
+
+    <div class="part4">
+      <h3>Project</h3>
+      <div class="project_part">
+        <div class="project_part1">
+          <p id="project_resume"></p>
+        </div>
+
+        <div class="project_part1">
+          <p id="technology_resume"></p>
+        </div>
+
+        <div class="project_part1">
+          <p id="project_description_resume"></p>
+        </div>
+        
+        <div class="project_part1">
+          <p id="project_link_resume"></p>
+        </div>
+    </div>
+  </div>
+
+
+    <div class="part5">
+      <h3>Experience</h3>
+      <div class="experience_part">
+        <div class="experience_part1">
+          <div class="experience_part1_company">
+            <p id="company_resume"></p> | <p id="designation_resume"></p> 
+          </div>
+          <div class="experience_part1_duration">
+          <p id="location_resume"></p> | <p id="duration_resume"></p>
+        </div>
+        </div>
+      
+      <p id="company_description_resume"></p>
+    </div>
+  </div>
+
+
+    <button class="btn print" onclick="handlePrint()">Print</button>
+  </div>
+</div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
